@@ -1,3 +1,38 @@
 header {
-  
+  display: flex;
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 90px;
+  /* margin-bottom: 0; */
+  background-color: rgb(119, 136, 161);
+  background-color: #004b66;
+  background-image: url("https://www.transparenttextures.com/patterns/twinkle-twinkle.png");
 }
+
+/* header {
+  background: rgba(90, 78, 10, 0.7);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 120px 0 0 0;
+}
+header > img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.avatar_name {
+  color: white;
+}
+.avatar_name > h2 > span {
+} */
