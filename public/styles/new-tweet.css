@@ -51,8 +51,8 @@ article {
   display: flex;
   flex-direction: column;
   border: .25em solid black;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 
 }
 
@@ -96,10 +96,7 @@ article header {
 }
 
 #tweet {
-  display: flex;
-  justify-content: start;
   padding-bottom: 20px;
-  padding-left: 30px;
   padding-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
@@ -113,4 +110,9 @@ footer {
   margin: 5px 10px;
   padding: .60em;
   font-size: 16px;
+}
+
+#tweets-container {
+  display: flex;
+  flex-direction: column;
 }
