@@ -4,29 +4,80 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const toggleBackTpTopBtn = () => {
-  if ($(window).scrollTop() > 0) {
-    $(".back-to-top")
-      .show()
-      .fadeIn("slow");
-  } else {
-    $(".back-to-top")
-      .hide()
-      .fadeOut("slow");
-  }
-};
+// const toggleBackTpTopBtn = () => {
+//   if ($(window).scrollTop() > 0) {
+//     $(".back-to-top")
+//       .show()
+//       .fadeIn("slow");
+//   } else {
+//     $(".back-to-top")
+//       .hide()
+//       .fadeOut("slow");
+//   }
+// };
 
 $(document).ready(function() {
-  // hide back to top button at initial render
-  $(".back-to-top").hide();
-  // call toggleBackTpTopBtn on page scroll
-  $(window).scroll(toggleBackTpTopBtn);
-  // clicking on back to top
-  $(".back-to-top").on("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-    toggleBackTpTopBtn();
-  });
+  // // hide back to top button at initial render
+  // $(".back-to-top").hide();
+  // // call toggleBackTpTopBtn on page scroll
+  // $(window).scroll(toggleBackTpTopBtn);
+  // // clicking on back to top
+  // $(".back-to-top").on("click", () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth"
+  //   });
+  //   toggleBackTpTopBtn();
+  // });
+
+  const tweetData = {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+        "handle": "@SirIsaac"
+      },
+    "content": {
+        "text": "If I have seen further it is by standing on the shoulders of giants"
+      },
+    "created_at": 1461116232227
+ }
+
+const createTweetElement = function (data) {
+  const $tweet = $(`
+    <header>
+    <div id='face-icon-and-name'>
+      <img src=${data.user.avatars}>
+      <span>${data.user.name}</span>
+    </div>
+    <div>${data.user.handle}</div>
+  </header>
+  <p id=tweet>${data.content.text}</p>
+  <footer>
+    <span>${data.created_at}</span>
+    <icons>
+      <i class="fas fa-flag fa-lg"></i>
+      <i class="fas fa-retweet fa-lg"></i>
+      <i class="fas fa-heart fa-lg"></i>
+    </icons>
+  </footer>
+`)
+  return $tweet
+}
+
+const $tweet = createTweetElement(tweetData);
+
+// Test / driver code (temporary)
+console.log($tweet); // to see what it looks like
+$('#tweets-container').append($tweet);
+    
 });
+
+
+
+
+
+
+
+
+
+

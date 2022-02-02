@@ -50,7 +50,6 @@
 article {
   display: flex;
   flex-direction: column;
-
   border: .25em solid black;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -58,7 +57,11 @@ article {
 }
 
 article:hover {
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 10px 5px 15px rgb(85, 81, 81);
+}
+
+icons i {
+  margin: 5px;
 }
 
 icons i:hover {
@@ -66,17 +69,38 @@ icons i:hover {
 }
 
 header {
+  height: 70px;
+
   display: flex;
+  align-items: center;
 }
 
 article header {
   justify-content: space-between;
-  margin: 0 10px;
+  margin-right: 30px;
+  margin: 0 25px;
+}
+
+#face-icon-and-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+}
+
+#face-icon-and-name span {
+  padding-left: 20px;
+
 }
 
 #tweet {
+  display: flex;
+  justify-content: start;
   padding-bottom: 20px;
-  padding-top: 10px;
+  padding-left: 30px;
+  padding-top: 30px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -87,4 +111,6 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 5px 10px;
+  padding: .60em;
+  font-size: 16px;
 }
