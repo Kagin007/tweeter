@@ -30,40 +30,46 @@ $(document).ready(function() {
 //   toggleBackTpTopBtn();
 // });
 
-const tweetData = [
-  {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-  "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-  "created_at": 1461116232227
-},
-{
-  "user": {
-    "name": "Descartes",
-    "avatars": "https://i.imgur.com/nlhLi3I.png",
-    "handle": "@rd" },
-  "content": {
-    "text": "Je pense , donc je suis"
-  },
-  "created_at": 1461113959088
-}
-]
+// const tweetData = [
+//   {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//       "handle": "@SirIsaac"
+//     },
+//   "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//   "created_at": 1461116232227
+//   },
+//   {
+//   "user": {
+//     "name": "Descartes",
+//     "avatars": "https://i.imgur.com/nlhLi3I.png",
+//     "handle": "@rd" },
+//   "content": {
+//     "text": "Je pense , donc je suis"
+//     },
+//   "created_at": 1461113959088
+//   }
+// ]
 
 const renderTweets = function(tweets) {
   // loops through tweets
-  for (let tweet of tweets) {
+  for (let tweet of tweets.reverse()) {
     // calls createTweetElement for each tweet
     const $tweet = createTweetElement(tweet);
     // takes return value and appends it to the tweets container
     $('#tweets-container').append($tweet);    
-  }
+  };
+};
 
-}
+//escape function to prevent XSS (cross site scripting)
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function (data) {
 const $tweet = $(`
@@ -75,7 +81,7 @@ const $tweet = $(`
     </div>
     <div>${data.user.handle}</div>
   </header>
-  <p id=tweet>${data.content.text}</p>
+  <p id=tweet>${escape(data.content.text)}</p>
   <footer>
     <span>
       ${timeago.format(data.created_at)}
@@ -91,14 +97,44 @@ const $tweet = $(`
 return $tweet
 }
 
-renderTweets(tweetData)
-
 $("form").submit(function(event) {
-  alert("Handler for .subit() called.");
   event.preventDefault();
-})
+  const charCounter = Number($('#char-counter').val())  
   
+  if (charCounter < 0) {
+    alert('too many characters for this tweet!\n 140 is the char limit')
+  } else if (charCounter === 140) {
+    alert('This tweet is empty!')
+  } else {
+    const serializedForm = $(this).serialize();
+    $('#tweet-text').val("")
+    //empty container to not append twice    
+    // $('#tweets-container').empty();
+    
+    //post to database
+    $.post('/tweets', serializedForm )
+      .done(function () {
+        $('#tweets-container').empty(); //causes bumping on submit
+
+        //load tweets
+        loadTweets()
+    })
+    //set textbox to empty
+    // $('#tweet-text').val("")
+  };
 });
+
+const loadTweets = function () {
+  $.ajax('/tweets', {method: 'GET'})
+  .then(function (data) {
+    renderTweets(data)
+  })
+}
+
+loadTweets()
+
+});
+
 
 
 

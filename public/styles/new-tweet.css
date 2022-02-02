@@ -8,16 +8,14 @@
   background: #5a6792;
   color: white;
   font-family: Bungee;
-
 }
 
-.container .counter {
+.counter {
   font-family: Bungee;
 }
 
 .container label {
   font-family: Source Sans;
-
 }
 
 #label-textbox {
