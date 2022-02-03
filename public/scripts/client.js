@@ -4,55 +4,38 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const toggleBackTpTopBtn = () => {
-//   if ($(window).scrollTop() > 0) {
-//     $(".back-to-top")
-//       .show()
-//       .fadeIn("slow");
-//   } else {
-//     $(".back-to-top")
-//       .hide()
-//       .fadeOut("slow");
-//   }
-// };
+const toggleBackTpTopBtn = () => {
+  if ($(window).scrollTop() > 0) {
+    $(".back-to-top")
+      .show()
+      .fadeIn("slow");
+  } else {
+    $(".back-to-top")
+      .hide()
+      .fadeOut("slow");
+  }
+};
 
 $(document).ready(function() {
-// // hide back to top button at initial render
-// $(".back-to-top").hide();
-// // call toggleBackTpTopBtn on page scroll
-// $(window).scroll(toggleBackTpTopBtn);
-// // clicking on back to top
-// $(".back-to-top").on("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: "smooth"
-//   });
-//   toggleBackTpTopBtn();
-// });
+// hide back to top button at initial render
+$(".back-to-top").hide();
+// call toggleBackTpTopBtn on page scroll
+$(window).scroll(toggleBackTpTopBtn);
+// clicking on back to top
+$(".back-to-top").on("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+  toggleBackTpTopBtn();
+});
 
-// const tweetData = [
-//   {
-//   "user": {
-//     "name": "Newton",
-//     "avatars": "https://i.imgur.com/73hZDYK.png",
-//       "handle": "@SirIsaac"
-//     },
-//   "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//   "created_at": 1461116232227
-//   },
-//   {
-//   "user": {
-//     "name": "Descartes",
-//     "avatars": "https://i.imgur.com/nlhLi3I.png",
-//     "handle": "@rd" },
-//   "content": {
-//     "text": "Je pense , donc je suis"
-//     },
-//   "created_at": 1461113959088
-//   }
-// ]
+$('.fas fa-angle-double-down').on('click', () => {
+  window.scrollTo({
+    bottom: 10,
+    behaviour: "smooth"
+  })
+})
 
 const renderTweets = function(tweets) {
   // loops through tweets
@@ -102,10 +85,14 @@ $("form").submit(function(event) {
   const charCounter = Number($('#char-counter').val())  
   
   if (charCounter < 0) {
-    alert('too many characters for this tweet!\n 140 is the char limit')
+    $('.errorLength').slideDown()
+    $('.errorNoText').slideUp();
   } else if (charCounter === 140) {
-    alert('This tweet is empty!')
+    $('.errorLength').slideUp();
+    $('.errorNoText').slideDown()
   } else {
+    $('.errorLength').slideUp();
+    $('.errorNoText').slideUp();
     const serializedForm = $(this).serialize();
     $('#tweet-text').val("")
     //empty container to not append twice    
@@ -115,6 +102,8 @@ $("form").submit(function(event) {
     $.post('/tweets', serializedForm )
       .done(function () {
         $('#tweets-container').empty(); //causes bumping on submit
+        //reset counter to 140
+        $('#char-counter').val(140)
 
         //load tweets
         loadTweets()

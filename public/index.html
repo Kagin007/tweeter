@@ -86,7 +86,8 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class='errorLength'><i class="fas fa-exclamation-triangle"></i> Error: Too many characters <i class="fas fa-exclamation-triangle"></i></h2>
+        <h2 class='errorNoText'><i class="fas fa-exclamation-triangle"></i> Error: No text inputted <i class="fas fa-exclamation-triangle"></i></h2>
         <form method="POST" action="/tweets/">
           <div id='label-textbox'>
             <label for="tweet-text">What are you humming about?</label>
