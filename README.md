@@ -6,11 +6,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-["main text input"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterTyping.png?raw=true)
+!["main text input"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterTyping.png?raw=true)
 
-["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterError.png?raw=true)
+!["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterError.png?raw=true)
 
-["desktop view"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterdesktopView.png?raw=true)
+!["desktop view"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterdesktopView.png?raw=true)
 
 
 ## Getting Started
