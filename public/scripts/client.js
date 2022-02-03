@@ -30,13 +30,6 @@ $(".back-to-top").on("click", () => {
   toggleBackTpTopBtn();
 });
 
-$('.fas fa-angle-double-down').on('click', () => {
-  window.scrollTo({
-    bottom: 10,
-    behaviour: "smooth"
-  })
-})
-
 const renderTweets = function(tweets) {
   // loops through tweets
   for (let tweet of tweets.reverse()) {
@@ -94,9 +87,7 @@ $("form").submit(function(event) {
     $('.errorLength').slideUp();
     $('.errorNoText').slideUp();
     const serializedForm = $(this).serialize();
-    $('#tweet-text').val("")
-    //empty container to not append twice    
-    // $('#tweets-container').empty();
+    $('#tweet-text').val("") 
     
     //post to database
     $.post('/tweets', serializedForm )
@@ -108,8 +99,6 @@ $("form").submit(function(event) {
         //load tweets
         loadTweets()
     })
-    //set textbox to empty
-    // $('#tweet-text').val("")
   };
 });
 

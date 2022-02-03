@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   margin-top: 0;
+  animation-name: arrowMovement;
+  animation-duration: 1s;
 }
 
 .container button {
@@ -68,7 +70,6 @@ icons i:hover {
 
 header {
   height: 70px;
-
   display: flex;
   align-items: center;
 }
@@ -93,6 +94,20 @@ article header {
 
 }
 
+#label-textbox {
+  /* margin: 0; */
+  padding: 5px;
+}
+
+#tweet-text {
+  width: clamp(350px); /*clamp*/
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+
+}
+
 #tweet {
   padding-bottom: 20px;
   padding-top: 30px;
@@ -100,6 +115,7 @@ article header {
   margin-right: 10px;
   margin-bottom: 10px;
   border-bottom: .25em solid black;
+  word-wrap: break-word;
 }
 
 footer {
@@ -127,4 +143,19 @@ footer {
   display: none;
   border: 6px solid red;
   color: red
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+  };
+
+  .container {
+   margin-top: 600px;
+  }
+
+  #main-header {
+    margin-top: 200px;;
+  }
+  
 }

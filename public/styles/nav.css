@@ -46,13 +46,17 @@ nav {
   align-items: center;
 }
 
+.animated {
+  animation-name: arrowMovement;
+  animation-duration: 1s;
+}
 
 @keyframes arrowMovement {
   from {
-    transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -10px, 0);
   }
   to {
-    transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 10px, 0);
   }
 }
 
@@ -66,6 +70,7 @@ nav {
   /* margin-top: -1.2rem; */
   color: red;
   cursor: pointer;
+  
 }
 /* 
 nav {

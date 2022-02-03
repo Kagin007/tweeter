@@ -7,9 +7,10 @@
   flex-direction: column;
   position: relative;
   margin-top: 110px;
+  z-index: -2;
   /* margin-bottom: 0; */
   background-color: rgb(119, 136, 161);
-  background-color: #004b66;
+  background-color: #80c5df;
   background-image: url("https://www.transparenttextures.com/patterns/twinkle-twinkle.png");
 }
 
