@@ -55,7 +55,7 @@ $(document).ready(function() {
       <img src=${data.user.avatars}>
       <span>${data.user.name}</span>
     </div>
-    <div>${data.user.handle}</div>
+    <div id="handle">${data.user.handle}</div>
   </header>
   <p id=tweet>${escape(data.content.text)}</p>
   <footer>

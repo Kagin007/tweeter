@@ -1,10 +1,16 @@
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 0;
   animation-name: arrowMovement;
   animation-duration: 1s;
+  width: 100%;
 }
+
+#tweet-text {
+  font-size: 500;
+}
+
 
 .container button {
   background: #5a6792;
@@ -17,7 +23,8 @@
 }
 
 .container label {
-  font-family: Source Sans;
+  font-family: Source Sans Pro;
+  font-weight: 600;
 }
 
 #label-textbox {
@@ -26,12 +33,20 @@
   align-items: start;
   border-bottom: 4px solid black;
   padding-bottom: 2em;
+  width: 80%;
+}
+
+#handle {
+  display: flex;
+  justify-content: end;
+
 }
 
 .container div {
   display: flex;
   justify-content: space-between;
   margin-top: 2em;
+  width: 80%;
 }
 
 .bottom {
@@ -40,7 +55,7 @@
 }
 
 .new-tweet {
-  width: 40%;
+  width: 100%;
 }
 
 .red-text {
@@ -69,9 +84,11 @@ icons i:hover {
 }
 
 header {
+  display: flex;
   height: 70px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 article header {
@@ -82,7 +99,7 @@ article header {
 
 #face-icon-and-name {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin-left: 10px;
   margin-right: 10px;
@@ -95,12 +112,11 @@ article header {
 }
 
 #label-textbox {
-  /* margin: 0; */
   padding: 5px;
 }
 
 #tweet-text {
-  width: clamp(350px); /*clamp*/
+  width: 600px; /*clamp*/
   border: none;
   background-color: transparent;
   resize: none;
@@ -109,8 +125,11 @@ article header {
 }
 
 #tweet {
+  text-align: start;
   padding-bottom: 20px;
+  padding-left: 30px;
   padding-top: 30px;
+  padding-right: 30px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -132,15 +151,17 @@ footer {
 }
 
 .errorNoText {
-  margin-top: 10px;
+  margin-top: 30px;
   display: none;
+  width: 600px;
   border: 6px solid red;
   color: red;
 }
 
 .errorLength {
-  margin-top: 10px;
+  margin-top: 30px;
   display: none;
+  width: 600px;
   border: 6px solid red;
   color: red
 }
