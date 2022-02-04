@@ -2,7 +2,12 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+Want to message with your friends on an app that arbitrarily cares about text length and uses *cute* cartoon profile pics? Then join Tweeter! The **hottest** messaging App.
+
+# Features Include
+- Feeling *lazy*? Autonomously scroll 'up' by clicking our fancy blue button that appears once you start scrolling down.
+- Don't try to send ```<scripts>``` through our messager app! We have built-in ,state-of-the-art technologies that prevents such tomfollery!
+- A one-page app means no more reloading webpages! You see **your** tweets as soon as you post them.
 
 ## Screenshots
 
