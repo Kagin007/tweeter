@@ -6,15 +6,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["main text input"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterTyping.png?raw=true)
-
-!["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterError.png?raw=true)
-
 !["desktop view"](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterFullScreen.png?raw=true)
 
 !["mobile view](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterMobileView.png?raw=true)
 
+!["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterErrorMessage.png?raw=true)
 
+!['too many characters]()
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
