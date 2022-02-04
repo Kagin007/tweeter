@@ -11,12 +11,14 @@
   font-size: 500;
 }
 
-
 .container button {
   background: #5a6792;
   color: white;
   font-family: Bungee;
+  transition: all .2s ease-in-out;
 }
+
+.container button:hover { transform: scale(1.1); }
 
 .counter {
   font-family: Bungee;
