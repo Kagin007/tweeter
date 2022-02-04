@@ -12,7 +12,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterErrorMessage.png?raw=true)
 
-!['too many characters]()
+!['too many characters](https://github.com/Kagin007/tweeter/blob/master/docs/tweetERTooManyChars.png?raw=true)
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
