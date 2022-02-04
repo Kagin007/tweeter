@@ -10,7 +10,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["error message"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterError.png?raw=true)
 
-!["desktop view"](https://github.com/Kagin007/tweeter/blob/master/docs/TweeterdesktopView.png?raw=true)
+!["desktop view"](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterFullScreen.png?raw=true)
+
+!["mobile view](https://github.com/Kagin007/tweeter/blob/master/docs/tweeterMobileView.png?raw=true)
 
 
 ## Getting Started
