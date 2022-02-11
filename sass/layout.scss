@@ -5,9 +5,8 @@
  */
 html {
   box-sizing: border-box;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -15,6 +14,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -26,14 +26,18 @@ main {
   text-align: center;
   margin: 3em;
   background-color: #f4f1ec;
+
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-@media only screen and (min-width: 1024px) {
-  .container {
+
+ @media only screen and (min-width: 1024px) {
+
+   .container {
     margin-top: 150px;
     margin-left: 150px;
-  }
-}
+   }
+   
+ }

@@ -15,12 +15,10 @@
   background: #5a6792;
   color: white;
   font-family: Bungee;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.container button:hover {
-  transform: scale(1.1);
-}
+.container button:hover { transform: scale(1.1); }
 
 .counter {
   font-family: Bungee;
@@ -43,6 +41,7 @@
 #handle {
   display: flex;
   justify-content: end;
+
 }
 
 .container div {
@@ -54,7 +53,7 @@
 
 .bottom {
   border: 1px solid;
-  margin: 1em 0;
+  margin: 1em 0
 }
 
 .new-tweet {
@@ -68,13 +67,14 @@
 article {
   display: flex;
   flex-direction: column;
-  border: 0.25em solid black;
+  border: .25em solid black;
   margin-top: 1em;
   margin-bottom: 1em;
+
 }
 
 article:hover {
-  box-shadow: 10px 5px 15px #555151;
+  box-shadow: 10px 5px 15px rgb(85, 81, 81);
 }
 
 icons i {
@@ -82,7 +82,7 @@ icons i {
 }
 
 icons i:hover {
-  color: #c5aa31;
+  color: rgb(197, 170, 49)
 }
 
 header {
@@ -110,6 +110,7 @@ article header {
 
 #face-icon-and-name span {
   padding-left: 20px;
+
 }
 
 #label-textbox {
@@ -117,12 +118,12 @@ article header {
 }
 
 #tweet-text {
-  width: 600px;
-  /*clamp*/
+  width: 600px; /*clamp*/
   border: none;
   background-color: transparent;
   resize: none;
   outline: none;
+
 }
 
 #tweet {
@@ -134,7 +135,7 @@ article header {
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  border-bottom: 0.25em solid black;
+  border-bottom: .25em solid black;
   word-wrap: break-word;
 }
 
@@ -142,7 +143,7 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 5px 10px;
-  padding: 0.6em;
+  padding: .60em;
   font-size: 16px;
 }
 
@@ -164,19 +165,20 @@ footer {
   display: none;
   width: 600px;
   border: 6px solid red;
-  color: red;
+  color: red
 }
 
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-  }
+  };
 
   .container {
-    margin-top: 600px;
+   margin-top: 600px;
   }
 
   #main-header {
-    margin-top: 200px;
+    margin-top: 200px;;
   }
+  
 }

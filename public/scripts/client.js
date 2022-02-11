@@ -47,6 +47,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
+  //dynamically inserting HTML from data property
   const createTweetElement = function(data) {
     const $tweet = $(`
   <article>

@@ -8,7 +8,7 @@
   position: relative;
   margin-top: 110px;
   z-index: -2;
-  background-color: #7788a1;
+  background-color: rgb(119, 136, 161);
   background-color: #80c5df;
   background-image: url("https://www.transparenttextures.com/patterns/twinkle-twinkle.png");
 }
@@ -16,16 +16,17 @@
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
-  }
+  };
 
   .container {
-    margin-top: 600px;
-    margin-left: 200px;
-    padding-left: 20px;
+   margin-top: 600px;
+   margin-left: 200px;
+   padding-left: 20px;
   }
 
   #main-header {
     margin-top: 200px;
     margin-left: 75px;
   }
+  
 }
